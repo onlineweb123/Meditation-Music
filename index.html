@@ -1,9 +1,26 @@
 <!doctype html>
-<html lang="ta">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Playlist a → a1..a20 (skip-missing logic)</title>
+    <meta charset="UTF-8">
+    <title>Meditation Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    <link rel='stylesheet' href='./style.css'>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
+        };
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA Example">
+    <link rel="apple-touch-icon" href="icon-152x152.png">
+    <meta name="msapplication-TileImage" content="icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+
 <style>
   :root{--bg:#17121d;--card:#241b34;--accent:#8a5cff;--muted:#bdb6c7}
   body{margin:0;background:linear-gradient(180deg,#0f0b12,#17121d);color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;padding:10px}
@@ -53,9 +70,10 @@
     .small{font-size:12px}
   }
 </style>
-</head>
+
 <body>
-<div class="wrap">
+    
+    <div class="wrap">
   <div class="main">
     <div class="title"> <center> Meditation Music </center> </div>
     <div id="currentFile" style="margin-top:6px;font-weight:600">a.mp3</div>
@@ -360,5 +378,7 @@ miniPlayBtns.forEach((btn, i) => {
   });
 });
 </script>
+    
+    
 </body>
 </html>
